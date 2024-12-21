@@ -1,0 +1,117 @@
+.hero {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  background-image: url("../../lib/other/orchestra-violins.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  display: flex;
+  align-items: center;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(
+    --color-hero-overlay,
+    rgba(0, 0, 0, 0.79)
+  ); /* Variable added */
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  color: var(--color-secondary);
+  padding-top: var(--space-6);
+}
+
+.hero-title {
+  margin-bottom: var(--space-3);
+  max-width: 25ch;
+  line-height: 0.9;
+  text-transform: uppercase;
+}
+
+.hero-title span:first-child {
+  font-size: clamp(var(--font-size-xl), 3vw, var(--font-size-3xl));
+  display: block;
+  margin-bottom: var(--space-1); /* Replaced hardcoded margin */
+}
+
+.hero-title span:last-child {
+  font-size: clamp(var(--font-size-3xl), 10vw, var(--font-size-6xl));
+  display: block;
+  margin-left: var(--space-1-neg); /* Define a negative space variable */
+  text-shadow: 0 4px 4px var(--shadow-sm-color, rgba(255, 255, 255, 0.1)); /* Added variable */
+}
+
+.hero-subtitle {
+  font-family: var(--font-primary);
+  font-size: clamp(var(--font-size-sm), 1.5vw, var(--font-size-md));
+  font-weight: 400;
+  letter-spacing: 0.05em;
+  margin-top: var(--space-2);
+  max-width: 35vw;
+}
+
+@media (max-width: 768px) {
+  .hero-title span:last-child {
+    margin-left: var(--space-1-neg-small); /* Adjusted for mobile */
+  }
+}
+
+/*Price*/
+
+.price-container {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 24px 0;
+  flex-wrap: wrap;
+}
+
+.price-label {
+  font-size: 1.1rem;
+}
+
+.original-price {
+  font-size: 1.5rem;
+  text-decoration: line-through;
+
+  position: relative;
+}
+
+.discount-badge {
+  background-color: var(--color-primary);
+  color: var(--color-text-dark);
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+}
+
+.final-price {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+/* For mobile screens */
+@media (max-width: 480px) {
+  .price-container {
+    gap: 8px;
+  }
+
+  .original-price {
+    font-size: 1.2rem;
+  }
+
+  .final-price {
+    font-size: 1.6rem;
+  }
+}
