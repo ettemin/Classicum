@@ -26,8 +26,8 @@
   --space-4: 2rem; /* 32px */
   --space-5: 3rem; /* 48px */
   --space-6: 4rem; /* 64px */
-  --space-1-neg: -0.5rem; /* Negative equivalent of space-1 */
-  --space-1-neg-small: -0.25rem;
+  --space-1-neg: -0.3rem; /* Negative equivalent of space-1 */
+  --space-1-neg-small: -0.1rem;
 
   /* Font Sizes (using a modular scale - 1.25 major third) */
   --font-size-base: 1rem; /* 16px (base size) */
