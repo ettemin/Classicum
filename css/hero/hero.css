@@ -106,7 +106,7 @@
 }
 
 .final-price {
-  font-size: clamp(var(--font-size-md), 4vw, var(--font-size-3xl));
+  font-size: clamp(var(--font-size-2xl), 4vw, var(--font-size-3xl));
   font-weight: bold;
 }
 
@@ -121,6 +121,6 @@
   }
 
   .final-price {
-    font-size: clamp(var(--font-size-xl), 8vw, var(--font-size-6xl));
+    font-size: clamp(var(--font-size-xl), 8vw, var(--font-size-3xl));
   }
 }
